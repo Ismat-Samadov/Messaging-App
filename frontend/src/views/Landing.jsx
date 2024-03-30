@@ -11,7 +11,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 import UserChats from '../components/UserChats';
 import Chatroom from '../components/Chatroom';
 import ActionsMenu from '../components/ActionsMenu';
-import NewChatMenu from '../components/NewChatMenu';
+import NewChatMenu from '../components/newChatMenu';
 
 const Landing = () => {
   const auth = useAuthUser();
