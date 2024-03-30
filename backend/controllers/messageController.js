@@ -45,12 +45,12 @@ exports.create = [
 
     const image = fileExtension
       ? await new Promise((resolve) => {
-          cloudinary.uploader
-            .upload_stream((e, uploadResult) => {
-              return resolve(uploadResult);
-            })
-            .end(req.file.buffer);
-        })
+        cloudinary.uploader
+          .upload_stream((e, uploadResult) => {
+            return resolve(uploadResult);
+          })
+          .end(req.file.buffer);
+      })
       : null;
 
     const newMessage = new Message({ content: req.body.content, author: req.user._id, chatroom: req.body.chatroom, imgUrl: image ? image.url : null });

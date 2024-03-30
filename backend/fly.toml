@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for messaging-app-api-odin on 2024-02-23T16:21:32Z
+# fly.toml app configuration file generated for messaging-app--api on 2024-03-31T01:27:37+04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'messaging-app-api-odin'
+app = 'messaging-app--api'
 primary_region = 'lhr'
 
 [build]
