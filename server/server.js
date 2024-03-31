@@ -9,8 +9,8 @@ const app = express();
 
 app.use(
   cors({
-    // credentials: true,
-    // origin: "https://messaging-app-ochre.vercel.app",
+    credentials: true,
+    origin: "https://messaging-app-omega-ten.vercel.app",
   }),
 );
 app.use(cookieParser());
