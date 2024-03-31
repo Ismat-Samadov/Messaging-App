@@ -1,34 +1,28 @@
-# messaging-app
-## About
-This is a personal project created using MERN stack, tailwindCSS, shadcn/ui and socket.io. The purpose of this project is to understand and implement the workings of realtime server and websockets.
+# MERN Messaging App
 
-As of right now the project is a bit lacking in frontend (because I was working on this alone and it had been too long so I needed it to be finished quickly), but all the critical components are working and the backend is complete.
+This application is built using the MERN (MongoDB, Express.js, React.js, Node.js) stack, allowing users to securely sign up, log in, log out, view a list of all users, send messages to other users, and receive messages from them. Click [here](https://chatsphere-3sxt.onrender.com) to view the app. 
 
-**Check it out** [Live](https://messaging-app-ochre.vercel.app/)
+## Features
 
-**NOTE:** The server is deployed on a free service so it might take some time to boot up so the first request might take upto 30-40 seconds but subsequent requests should be fast.
+- Secure Authentication: Users can securely sign up, log in, and log out of the application using their email and password. Passwords are securely hashed before being stored in the database.
+- User Management: Users can view a list of all registered users on the platform.
+- Messaging: Users can send text messages and emojis to any other registered user on the platform and receive messages from them in real-time.
 
-## Development Setup
-Pre-requisite: 
-- Install and setup mongodb community server
-- Create an account on cloudinary
+## Usage 
 
-Next steps:
-1. Clone the repository:
-   ```
-   git clone https://github.com/faizan-20/messaging-app
-   ```
+- Sign Up: Register for a new account by providing a valid email address and password.
+- Log In: Log in to your account with your registered email and password.
+- View Users: Once logged in, you can view a list of all registered users on the platform.
+- Messaging: Select a user from the list to send them a message. You can also receive messages from other users in real-time.
+- Log Out: Log out of your account when you're done using the application.
 
-2. Go to server and copy .env.example to .env and fill all the variables if not already filled.
+## Technologies Used
 
-3. Inside server, run
-   ```
-   npm run dev
-   ```
+- MongoDB: NoSQL database used to store user information and messages.
+- Express.js: Backend framework for building the RESTful API.
+- React.js: Frontend library for building user interfaces.
+- Node.js: JavaScript runtime for executing server-side code.
+- Passport authentication: local-passport.
 
-4. Go to client and chage the server link from PROD to DEV insinde main.tsx
-
-5. Inside client, run
-   ```
-   npm run dev
-   ```
+### Contributing
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
