@@ -17,7 +17,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://chatsphere-zqoh.onrender.com/login", credentials);
+      const response = await axios.post("https://messaging-app-i1kr.onrender.com/login", credentials);
       const { token } = response.data;
       localStorage.setItem('token', token);
       navigate('/message');

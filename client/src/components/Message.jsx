@@ -26,7 +26,7 @@ function Message() {
                     return;
                 }
                 const tokenWithoutBearer = token.replace('Bearer ', '');
-                const response = await axios.get('https://chatsphere-zqoh.onrender.com', {
+                const response = await axios.get('https://messaging-app-i1kr.onrender.com', {
                     headers: {
                         Authorization: `Bearer ${tokenWithoutBearer}`,
                     },

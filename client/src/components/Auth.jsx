@@ -27,7 +27,7 @@ function Auth() {
         e.preventDefault();
         try {
           const { data } = await axios.post(
-            "https://chatsphere-zqoh.onrender.com",
+            "https://messaging-app-i1kr.onrender.com/",
             {
               ...inputValue,
             },

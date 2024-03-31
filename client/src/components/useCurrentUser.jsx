@@ -12,7 +12,7 @@ const useCurrentUser = () => {
           throw new Error('Token not found');
         }
         const tokenWithoutBearer = token.replace('Bearer ', '');
-        const response = await axios.get('https://chatsphere-zqoh.onrender.com/login', {
+        const response = await axios.get('https://messaging-app-i1kr.onrender.com/login', {
           headers: {
             Authorization: `Bearer ${tokenWithoutBearer}`,
           },

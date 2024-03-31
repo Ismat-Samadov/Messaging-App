@@ -18,14 +18,14 @@ const logoutRouter = require('./routes/logout');
 const usersRouter = require('./routes/users');
 const convoRouter = require('./routes/convo');
 
-const mongoDB = process.env.mongoDB;
+const mongoDB = process.env.MONGODB_URI;
 
 const app = express();
 
 //app.use(cors());
 
 app.use(cors({
-  origin: 'https://chatsphere-3sxt.onrender.com', 
+  origin: 'https://vercel.com/ismat-samadovs-projects/messaging-app', 
   credentials: true
 }));
 
