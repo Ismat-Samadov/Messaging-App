@@ -1,43 +1,34 @@
-# Messaging App
+# messaging-app
+## About
+This is a personal project created using MERN stack, tailwindCSS, shadcn/ui and socket.io. The purpose of this project is to understand and implement the workings of realtime server and websockets.
 
-## Description:
+As of right now the project is a bit lacking in frontend (because I was working on this alone and it had been too long so I needed it to be finished quickly), but all the critical components are working and the backend is complete.
 
-This messaging app project is built as part of The Odin Project curriculum. It utilizes React for the frontend, Express for the backend, and MongoDB as the database. The app provides users with the ability to add friends, create group chats, and upload pictures to enhance communication.
+**Check it out** [Live](https://messaging-app-ochre.vercel.app/)
 
-Deployed on [Netlify](https://messaging-app-odin.netlify.app/)
+**NOTE:** The server is deployed on a free service so it might take some time to boot up so the first request might take upto 30-40 seconds but subsequent requests should be fast.
 
-![website snapshot](https://raw.githubusercontent.com/Extraterra1/Messaging-App/main/website-snapshot.png)
+## Development Setup
+Pre-requisite: 
+- Install and setup mongodb community server
+- Create an account on cloudinary
 
-## Table of Contents:
+Next steps:
+1. Clone the repository:
+   ```
+   git clone https://github.com/faizan-20/messaging-app
+   ```
 
-- [Installation](https://github.com/Extraterra1/Messaging-App#installation)
-- [Usage](https://github.com/Extraterra1/Messaging-App#usage)
-- [Features](https://github.com/Extraterra1/Messaging-App#features)
+2. Go to server and copy .env.example to .env and fill all the variables if not already filled.
 
-## Installation:
+3. Inside server, run
+   ```
+   npm run dev
+   ```
 
-To run this messaging app locally, follow these steps:
+4. Go to client and chage the server link from PROD to DEV insinde main.tsx
 
-1.  Clone this repository to your local machine.
-2.  Navigate to the `frontend` directory and run `npm install` to install frontend dependencies.
-3.  Navigate to the `backend` directory and run `npm install` to install backend dependencies.
-
-4.  Create a `.env` file in the `backend` directory and add your MongoDB connection string as `DB_URL`.
-5.  In the `backend` directory, run `npm start` to start the Express server.
-6.  In the `frontend` directory, run `npm run dev` to start the React development server.
-
-## Usage:
-
-Once the app is running locally, you can access it through your web browser. Here are some key features:
-
-- **User Authentication:** Users can sign up, log in, and log out securely.
-- **Add Friends:** Users can search for and add friends to their contacts list.
-- **Create Group Chats:** Users can create group chats and add multiple friends to the conversation.
-- **Upload Pictures:** Users can upload and share pictures within individual and group chats.
-
-## Features:
-
-- **React Frontend:** Provides a responsive and interactive user interface.
-- **Express Backend:** Handles server-side logic and API endpoints for data manipulation.
-- **MongoDB Database:** Stores user information, friend lists, group chat data, and uploaded pictures.
-- **User Authentication:** Ensures secure access to the app's features.
+5. Inside client, run
+   ```
+   npm run dev
+   ```
