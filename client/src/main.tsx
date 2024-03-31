@@ -9,7 +9,7 @@ import Home from "./components/Home.tsx";
 import { Toaster } from "./components/ui/toaster.tsx";
 import ChatProvider from "./context/ChatProvider.tsx";
 
-const PROD = "https://messaging-app-i1kr.onrender.com";
+const PROD = "https://messaging-app-i1kr.onrender.com/api/v1";
 // const DEV = "http://localhost:8000/api/v1";
 
 axios.defaults.baseURL = PROD;
