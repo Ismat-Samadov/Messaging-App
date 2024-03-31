@@ -34,7 +34,7 @@ connectDB()
     const io = new Server(server, {
       pingTimeout: 60000,
       cors: {
-        origin: "https://messaging-app-ochre.vercel.app",
+        origin: "https://messaging-app-omega-ten.vercel.app",
       },
     });
 
