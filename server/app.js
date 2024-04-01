@@ -25,7 +25,7 @@ const app = express();
 //app.use(cors());
 
 app.use(cors({
-  origin: 'https://vercel.com/ismat-samadovs-projects/messaging-app', 
+  origin: "*", 
   credentials: true
 }));
 
