@@ -22,6 +22,7 @@ const login = async (req, res) => {
     // Log the hashed password from the database
     console.log('Hashed password from database:', user.password);
 
+    // Check password hashing algorithm and salt rounds consistency
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       console.log('Incorrect password for user:', username);
