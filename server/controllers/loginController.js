@@ -6,6 +6,9 @@ const login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
+    console.log('Password from request:', password);
+    console.log('Hashed password from database:', user.password);
+    
     // Log the request payload to verify the username and password
     console.log('Request payload:', req.body);
 
