@@ -5,26 +5,42 @@ const User = require('../models/User');
 const login = async (req, res) => {
   try {
     const { username, password } = req.body;
+
+    console.log('Attempting to log in with username:', username);
+
     const user = await User.findOne({ username });
     if (!user) {
+      console.log('User not found:', username);
       return res.status(404).json({ message: 'User not found' });
     }
+
+    console.log('User found:', user);
+
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
+      console.log('Incorrect password for user:', username);
       return res.status(401).json({ message: 'Incorrect password' });
     }
-      const payload = {
-        id: user._id,
-        username: user.username
+
+    console.log('Password verified for user:', username);
+
+    const payload = {
+      id: user._id,
+      username: user.username
+    };
+
+    jwt.sign(payload, 'cats', { expiresIn: '3d' }, (err, token) => {
+      if (err || !token) {
+        console.error('Error signing token:', err);
+        return res.status(500).json({ message: 'Internal server error' });
       }
-      jwt.sign(payload, 'cats', { expiresIn: '3d' }, (err, token) => {
-        if (err || !token) {
-          return res.status(500).json({ message: 'Internal server error' });
-        }
-        return res.json({ message: 'Login successful', token: 'Bearer ' + token });
-      });
+
+      console.log('Token signed successfully for user:', username);
+
+      return res.json({ message: 'Login successful', token: 'Bearer ' + token });
+    });
   } catch (error) {
-    console.error(error);
+    console.error('Error during login:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 };
@@ -44,12 +60,13 @@ function verifyJWT(req, res, next) {
         id: decoded.id,
         username: decoded.username
       };
+      console.log('Token verified successfully');
       next();
     });
   } else {
+    console.log('Authorization token is missing');
     res.status(401).json({ message: "Authorization token is missing", isLoggedIn: false });
   }
 }
-
 
 module.exports = { login, verifyJWT };
