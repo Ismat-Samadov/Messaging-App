@@ -6,9 +6,6 @@ const login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    console.log('Password from request:', password);
-    console.log('Hashed password from database:', user.password);
-    
     // Log the request payload to verify the username and password
     console.log('Request payload:', req.body);
 
@@ -21,6 +18,9 @@ const login = async (req, res) => {
     }
 
     console.log('User found:', user);
+
+    // Log the hashed password from the database
+    console.log('Hashed password from database:', user.password);
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
