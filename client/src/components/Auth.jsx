@@ -83,7 +83,7 @@ function Auth() {
                 </form>
             </main>
             </div>
-            <footer className="flex-row">Designed and developed by <a href="https://victoriakapelush.com" target="_blank">Victoria Kapelush</a></footer>
+        <footer className="flex-row">Designed and developed by <a href="https://ismat-samadov.github.io/html_resume/" target="_blank">Ismat Samadov</a></footer>
         </div>
     )
 }
