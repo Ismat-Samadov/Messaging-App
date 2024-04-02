@@ -6,6 +6,9 @@ const login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
+    // Log the request payload to verify the username and password
+    console.log('Request payload:', req.body);
+
     console.log('Attempting to log in with username:', username);
 
     const user = await User.findOne({ username });
