@@ -1,2 +1,1 @@
-export const API_DOMAIN =
-  "https://backendmessagingapp-production.up.railway.app/api";
+export const API_DOMAIN ="https://messaging-app-i1kr.onrender.com/";
