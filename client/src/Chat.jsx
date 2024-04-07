@@ -21,8 +21,8 @@ export default function Chat() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function connectToWs() {
-    const ws = new WebSocket('wss://top-messagingapp-api.onrender.com');
+  function connectToWs() { 
+    const ws = new WebSocket('wss://messaging-app-i1kr.onrender.com');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
