@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
+require('dotenv').config({ path: 'ENV_FILENAME' });
+
 const PORT = process.env.PORT || 9040;
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
